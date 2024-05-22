@@ -1,10 +1,15 @@
 #!/usr/bin/python3
+"""
+    File for the class Rectangle.
+"""
+
+
 class Rectangle:
     """
     Class that defines a rectangle with width and height properties.
-    """
 
-    def __init__(self, width=0, height=0):
+    """
+     def __init__(self, width=0, height=0):
         """
         Initializes a new Rectangle instance.
 
