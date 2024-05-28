@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+File class for Student
+"""
+
+
 class Student:
     """
     Defines a student by first_name, last_name, and age.
