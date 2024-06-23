@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    Script that changes the name of a State object from the database.
+    Script that deletes all State objects with a name containing the letter a.
 """
 import sys
 from model_state import Base, State
@@ -20,8 +20,5 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    q = session.query(State).where(State.id.ilike(2))
-    state = q.one()
-    if state:
-        state.name = "New Mexico"
-        session.commit()
+    session.query(State).where(State.name.ilike("%a%")).delete()
+    session.commit()
